@@ -1,0 +1,63 @@
+<header>
+  <nav>
+    <section id="navegacion" class="container-fluid">
+      <div>
+        <img src="../../assets/logo.png" alt="logo" id="logo">
+        <input type="text" placeholder="Buscar productos, marcas, y mas..." id="search" [(ngModel)]="busqueda">
+      </div>
+      <div>
+        <img src="../../assets/delivery.png" alt="delivery" id="delivery">
+        <p>¡Envío Express <b>en menos de 2 horas!</b></p>
+      </div>
+    </section>
+    <section id="opciones">
+      <div>
+        <select name="categorias" id="">
+          <option value="Cat">categorias</option>
+        </select>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Historial</a></li>
+          <li><a href="#">Tiendas Oficiales</a></li>
+          <li><a href="#">Ofertas de la semana</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="#"><img src="../../assets/usuario.png" alt="usuario"></a>
+            <select name="usuario" id="">
+              <option value="u">Eduardo</option>
+            </select>
+          </li>
+          <li><a href="#">Mis Compras</a></li>
+          <li>
+            <select name="favoritos" id="">
+              <option value="fav">Favoritos</option>
+            </select>
+          </li>
+          <li><a href="#"><img src="../../assets/bell.png" alt="bell"></a></li>
+        </ul>
+      </div>
+    </section>
+  </nav>
+</header>
+<main>
+  <img src="../../assets/banner.PNG" alt="banner">
+  <div class="container">
+    <h1 *ngIf="busqueda">{{busqueda}}</h1>
+    <section class="cards row d-flex justify-content-center">
+      <mat-card class="example-card col-2" routerLink="../descripcion/{{card.id}}" *ngFor="let card of cards">
+        <img [src]="card.imagenUrl" alt="producto">
+        <mat-card-content>
+          <h2>{{card.nombre}}</h2>
+          <h3>{{card.precio}}</h3>
+          <span *ngIf="card.tipoEnvio">Envío Gratis</span>
+        </mat-card-content>
+      </mat-card>
+    </section>
+  </div>
+</main>

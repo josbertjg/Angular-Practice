@@ -1,0 +1,64 @@
+<header>
+  <nav>
+    <section id="navegacion" class="container-fluid">
+      <div>
+        <img src="/assets/logo.png" alt="logo" id="logo">
+        <input type="text" placeholder="Buscar productos, marcas, y mas..." id="search" [(ngModel)]="busqueda">
+      </div>
+      <div>
+        <img src="/assets/delivery.png" alt="delivery" id="delivery">
+        <p>¡Envío Express <b>en menos de 2 horas!</b></p>
+      </div>
+    </section>
+    <section id="opciones">
+      <div>
+        <select name="categorias" id="">
+          <option value="Cat">categorias</option>
+        </select>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Historial</a></li>
+          <li><a href="#">Tiendas Oficiales</a></li>
+          <li><a href="#">Ofertas de la semana</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="#"><img src="/assets/usuario.png" alt="usuario"></a>
+            <select name="usuario" id="">
+              <option value="u">Eduardo</option>
+            </select>
+          </li>
+          <li><a href="#">Mis Compras</a></li>
+          <li>
+            <select name="favoritos" id="">
+              <option value="fav">Favoritos</option>
+            </select>
+          </li>
+          <li><a href="#"><img src="/assets/bell.png" alt="bell"></a></li>
+        </ul>
+      </div>
+    </section>
+  </nav>
+</header>
+<main>
+  <p>Tambien puede interesarte: computadora-canaima-anrminer s9-laptop canaima</p>
+  <p>Volver al listado | Comutacion > Accesorios para PC Gaming > Audifonos</p>
+  <section *ngFor="let card of cards" class="container-producto">
+    <div *ngIf="cardId==card.id">
+      <img [src]="card.imagenUrl" alt="producto">
+      <div>
+        <h1>{{card.nombre}}</h1>
+        <h2>{{card.precio}}</h2>
+        <h3>100Bs</h3>
+        <span *ngIf="card.tipoEnvio">Envío gratis a todo el país</span>
+        <label>Cantidad: <b>1 Unidad</b></label>
+        <a href="#" class="btn btn-primary rounded d-block">Comprar Ahora</a>
+      </div>
+    </div>
+  </section>
+</main>

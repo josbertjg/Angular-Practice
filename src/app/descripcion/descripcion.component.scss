@@ -1,0 +1,114 @@
+header{
+  width: 100%;
+  background-color: #fff158;
+}
+nav{
+  width: 100%;
+  padding: 0rem 0rem 0 4rem;
+  #navegacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+      display: flex;
+      align-items: center;
+      margin-right: 4rem;
+    }
+    input{
+      width: 40rem;
+      height: 2rem;
+      border-radius: 5px;
+      border: none;
+    }
+    & #logo{
+      height: 7rem;
+      margin-right: 1rem;
+    }
+    & #delivery{
+      height: 3rem;
+      margin-right: 1rem;
+    }
+  }
+  #opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & div{
+      margin-right: 5rem;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+      padding: 0%;
+      margin: 0%;
+      li{
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+    img{
+      height: 1.5rem;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    select{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+main{
+  background-color: rgb(216, 216, 216);
+  padding: .2rem .5rem;
+  min-height: 90vh;
+  p{
+    margin: 0%;
+    padding: 0;
+  }
+  &> p:first-child{
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &> p:nth-child(2){
+    color: blue;
+    margin-bottom: .5rem;
+  }
+  &>section{
+    background-color: white;
+    border-radius: 10px;
+    padding: .2rem 1rem;
+    &>div{
+      display: flex;
+      justify-content: space-between;
+      img{
+        height: 30rem;
+        margin-left: 10rem;
+      }
+      div{
+        position: relative;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 10px;
+        width: 25rem;
+        padding: .5rem;
+        h2{
+          font-weight: bold;
+        }
+        h3{
+          color: grey;
+          margin-bottom: 2rem;
+        }
+        span{
+          color: green;
+          font-weight: bold;
+        }
+        label{
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

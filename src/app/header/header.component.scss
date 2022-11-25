@@ -1,0 +1,84 @@
+.example-card {
+  max-width: 400px;
+}
+header{
+  width: 100%;
+  background-color: #fff158;
+}
+nav{
+  width: 100%;
+  padding: 0rem 0rem 0 4rem;
+  #navegacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+      display: flex;
+      align-items: center;
+      margin-right: 4rem;
+    }
+    input{
+      width: 40rem;
+      height: 2rem;
+      border-radius: 5px;
+      border: none;
+    }
+    & #logo{
+      height: 7rem;
+      margin-right: 1rem;
+    }
+    & #delivery{
+      height: 3rem;
+      margin-right: 1rem;
+    }
+  }
+  #opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & div{
+      margin-right: 5rem;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+      padding: 0%;
+      margin: 0%;
+      li{
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+    img{
+      height: 1.5rem;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    select{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+main{
+  & >img{
+    width: 100%;
+  }
+  .mat-card-content{
+    h2{
+      font-size: 1.5rem;
+    }
+    h3{
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    span{
+      color: green;
+      font-weight: bold;
+    }
+  }
+}
